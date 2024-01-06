@@ -60,6 +60,7 @@ app.use("/orders", orderRoutes);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
+  console.log(error);
   error.status = 404;
   next(error);
 });
